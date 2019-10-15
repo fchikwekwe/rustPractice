@@ -18,7 +18,7 @@ constraint  = typeVar ('is' | ':') typeClass
 typeClass   = IDENTIFIER 
 monotype    = typeVar | typ | array | object | function
 
-typeVar     = '\'' IDENTIFIER 
+typeVar     = IDENTIFIER 
 typ         = INT | FLOAT | STRING | BOOL | REGEX 
 array       = '[' monotype ']'
 object      = '{' properties? '}'
@@ -32,11 +32,11 @@ optional    = '?' IDENTIFIER ':' monotype
 pipe        = '<-' IDENTIFIER? ':' monotype
 
 INT         = 'int'
-FLT         = 'float'
-STR         = 'string'
+FLOAT         = 'float'
+STRING         = 'string'
 BOOL        = 'bool'
 REGEX       = 'regular expression'
-IDENTIFIER  = LETTER (LETTER | [0-9])*
-LETTER      = [a-zA-Z0-9]
+IDENTIFIER  = 't' ([0-9])*
+LETTER      = [a-zA-Z]
 WS          = [ \t\r\n]+ -> skip
 ```
