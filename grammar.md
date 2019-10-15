@@ -32,8 +32,8 @@ optional    = '?' IDENTIFIER ':' monotype
 pipe        = '<-' IDENTIFIER? ':' monotype
 
 INT         = 'int'
-FLOAT         = 'float'
-STRING         = 'string'
+FLOAT       = 'float'
+STRING      = 'string'
 BOOL        = 'bool'
 REGEX       = 'regular expression'
 IDENTIFIER  = 't' ([0-9])*
