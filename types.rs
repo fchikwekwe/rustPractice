@@ -1,3 +1,9 @@
+
+
+/*
+CODE FROM JOSH's PR FOR ME TO ANNOTATE AND REFERENCE
+*/
+
 use std::{cmp, collections::HashMap, fmt};
 
 // PolyType represents a generic parametrized type.

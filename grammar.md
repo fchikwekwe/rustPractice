@@ -38,5 +38,5 @@ BOOL        = 'bool'
 REGEX       = 'regular expression'
 IDENTIFIER  = 't' ([0-9])*
 LETTER      = [a-zA-Z]
-WS          = [ \t\r\n]+ -> skip
+WHITESPACE  = [ \t\r\n]+ -> skip
 ```
