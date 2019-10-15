@@ -12,18 +12,18 @@ single quotes indicate a literal value
 
 polytype    = 'forall' '[' vars? ']' ('where' constraints)? monotype
 
-vars        = tvr (',' tvr)* 
+vars        = typeVar (',' typeVar)* 
 constraints = constraint ( (',' | 'and') constraint)* 
-constraint  = tvr ('is' | ':') typeClass 
+constraint  = typeVar ('is' | ':') typeClass 
 typeClass   = IDENTIFIER 
-monotype    = tvr | typ | arr | obj | fun
+monotype    = typeVar | typ | array | object | function
 
-tvr         = '\'' IDENTIFIER 
-typ         = INT | FLT | STR | BOOL | REGEXP  
-arr         = '[' monotype ']'
-obj         = '{' properties? '}'
-fun         = '(' arguments? ')' '->' monotype
-properties  = property ( '|' property )* ( '|' tvr)?
+typeVar     = '\'' IDENTIFIER 
+typ         = INT | FLOAT | STRING | BOOL | REGEX 
+array       = '[' monotype ']'
+object      = '{' properties? '}'
+function    = '(' arguments? ')' '->' monotype
+properties  = property ( '|' property )* ( '|' typeVar)?
 property    = IDENTIFIER ':' monotype
 arguments   = argument ( ',' argument )*
 argument    = required | optional | pipe
@@ -32,10 +32,10 @@ optional    = '?' IDENTIFIER ':' monotype
 pipe        = '<-' IDENTIFIER? ':' monotype
 
 INT         = 'int'
-FLT         = 'flt'
-STR         = 'str'
+FLT         = 'float'
+STR         = 'string'
 BOOL        = 'bool'
-REGEXP      = 'regexp'
+REGEX       = 'regular expression'
 IDENTIFIER  = LETTER (LETTER | [0-9])*
 LETTER      = [a-zA-Z0-9]
 WS          = [ \t\r\n]+ -> skip
