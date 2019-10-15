@@ -1,0 +1,38 @@
+type Token int 
+
+const (
+    EOF 
+
+    FORALL
+    WHERE 
+
+    CONSTRAINT 
+    TYPEVAR 
+
+    ARRAY 
+    OBJECT
+    FUNCTION
+    PROPERTY
+    REQUIREDARG
+    OPTIONALARG
+    PIPEARG
+
+    INT
+    FLOAT
+    STRING
+    BOOL
+    REGEX
+
+    IDENTIFIER
+    LETTER
+    WS
+
+    LEFTBRACKET
+    RIGHTBRACKET
+    
+    LEFTPAREN
+    RIGHTPAREN
+    
+    LEFTBRACE
+    RIGHTBRACE
+)
